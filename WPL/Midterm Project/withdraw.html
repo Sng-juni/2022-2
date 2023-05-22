@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SKKU ATM</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="input_withdraw">
+        <div class="quick_links_1">
+          <p>Quick Links</p>
+          <button value="20" onclick="check_with(this)">20</button>
+          <button value="40" onclick="check_with(this)">40</button>
+          <button value="60" onclick="check_with(this)">60</button>
+          <button value="80" onclick="check_with(this)">80</button>
+        </div>
+        <div class="links">
+          <p>Enter the amount to withdraw</p>
+          <button type="button" value="100" onclick="input_with(this)">
+            <img
+              src="img/uparrow100copy.png"
+              onmouseover="this.src='img/uparrow100copyhover.png'"
+              onmouseout="this.src='img/uparrow100copy.png'"
+            />
+          </button>
+          <button type="button" value="20" onclick="input_with(this)">
+            <img
+              src="img/uparrow20copy.png"
+              onmouseover="this.src='img/uparrow20copyhover.png'"
+              onmouseout="this.src='img/uparrow20copy.png'"
+            />
+          </button>
+          <input type="text" value="0" id="withdraw" />
+          <button type="button" value="-20" onclick="input_with(this)">
+            <img
+              src="img/downarrow20copy.png"
+              onmouseover="this.src='img/downarrow20copyhover.png'"
+              onmouseout="this.src='img/downarrow20copy.png'"
+            />
+          </button>
+          <button type="button" value="-100" onclick="input_with(this)">
+            <img
+              src="img/downarrow100copy.png"
+              onmouseover="this.src='img/downarrow100copyhover.png'"
+              onmouseout="this.src='img/downarrow100copy.png'"
+            />
+          </button>
+          <button id="enter" value="enter" onclick="input_with(this)">
+            Enter
+          </button>
+        </div>
+        <div class="quick_links_2">
+          <p>Quick Links</p>
+          <button value="100" onclick="check_with(this)">100</button>
+          <button value="200" onclick="check_with(this)">200</button>
+          <button value="300" onclick="check_with(this)">300</button>
+          <button id="w_back_button" onclick="back_main(this)">Back</button>
+        </div>
+      </div>
+
+      <div class="check_withdraw">
+        <h1>WithDraw</h1>
+        <p id="with_amount"></p>
+        <button id="yes_button" onclick="withdraw_(event)">Yes</button>
+        <button id="no_button" onclick="back_withdraw(event)">No</button>
+      </div>
+
+      <div class="withdrawed">
+        <p>Money has been withdrawn.</p>
+        <img src="img/checkmark.png" id="check_img" />
+        <div>
+          <a href="main.html"><button id="home">Home</button></a>
+          <a href="withdraw.html"
+            ><button id="with_a">Perform Another Withdraw</button></a
+          >
+          <a href="index.html"><button id="return_c">Return Card</button></a>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

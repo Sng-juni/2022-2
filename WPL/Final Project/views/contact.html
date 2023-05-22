@@ -1,0 +1,21 @@
+{% extends 'template.html' %} {% block content %} {% if user %}
+<div class="contact-wrap">
+  <div>
+    <h1>Contact Us</h1>
+  </div>
+  <div class="contact-content">
+    <div class="contact-table-wrap">
+      <form action="/post/contact" method="post">
+        <textarea
+          type="textarea"
+          id="contact"
+          name="content"
+          placeholder="Please Enter the Content..."
+        ></textarea>
+        <br />
+        <button type="submit" id="contact-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endif %} {% endblock %}

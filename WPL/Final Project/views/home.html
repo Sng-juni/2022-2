@@ -1,0 +1,19 @@
+{% extends 'template.html' %} {% block content %} {% if user %}
+<div class="intro-wrap">
+  <div class="left-col">
+    <h1>Introduce</h1>
+    <p>Welcome to Iron Foot!</p>
+    <br />
+    <p>Iron Foot is a soccer club belonging to SKKU.</p>
+    <p>Since its foundation in 2002, it has been 20 years.</p>
+    <p>
+      Not only our students(YB) but also graduates(OB) regularly play soccer
+      together and hold various events together.
+    </p>
+  </div>
+  <div class="right-col">
+    <img src="/img/background.jpg" />
+  </div>
+</div>
+
+{% endif %} {% endblock %}

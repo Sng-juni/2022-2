@@ -1,0 +1,53 @@
+{% extends 'template.html' %} {% block content %} {% if user %}
+<div class="community-wrap">
+  <div>
+    <h1>Community</h1>
+  </div>
+  <div class="community-table-wrap">
+    <div class="write-community">
+      <form
+        action="/post/community"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div>
+          <textarea
+            name="content"
+            id="community-input"
+            maxlength="140"
+            placeholder="Please Enter the Content..."
+          ></textarea>
+        </div>
+        <div class="img-preview">
+          <img
+            id="img-preview"
+            src=""
+            alt="preview"
+            style="display: none"
+            width="250"
+          />
+          <input type="hidden" id="img-url" name="url" />
+        </div>
+        <div class="buttons">
+          <label id="img-label" for="img">Upload</label>
+          <input id="img" type="file" accept="image/*" />
+          <button type="submit" id="community-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+    {% for list in lists %}
+    <div class="posted-wrap">
+      <div>
+        <div class="posted-author">{{list.User.nickname}}</div>
+        <div class="posted-group">/ {{list.User.group}}</div>
+        <div class="posted-date">/ {{list.createdAt}}</div>
+        <div class="posted-content">{{list.content}}</div>
+        {% if list.img %}
+        <div class="posted-img"><img src="{{list.img}}" alt="섬네일" /></div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %} {% endblock %}

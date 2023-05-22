@@ -1,0 +1,17 @@
+{% extends 'template.html' %} {% block content %} {% if user %}
+<div class="admin-wrap">
+  <div>
+    <h1>Admin Page - Contact List</h1>
+  </div>
+  {% for list in lists %}
+  <div class="contacted-wrap">
+    <div class="contacted">
+      <div class="contacted-nickname">{{list.User.nickname}}</div>
+      <div class="contacted-group">/ {{list.User.group}}</div>
+      <div class="contacted-date">/ {{list.createdAt}}</div>
+      <div class="contacted-content">{{list.content}}</div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %} {% endblock %}

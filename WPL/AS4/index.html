@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="form">
+        <div class="login_tab"><div class="innerLogin">Login</div></div>
+        <div class="signup_tab">Sign up</div>
+        <div class="login_form">
+          <form>
+            <p id="login">Login</p>
+            <p class="login_info" id="login_info">Enter user name and password:</p>
+            <br>
+            <p>Email</p>
+            <input
+              type="text"
+              id="email"
+              placeholder="Email"
+            />
+            <br />
+            <p>Password</p>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+            />
+            <br />
+            <button id="login_button">Login</button>
+          </form>
+        </div>
+        <div class="signup_form">
+          <form>
+            <p id="login">Sign up</p>
+            <p id="login_info">Fill in the form:</p>
+            <br />
+            <p>First name</p>
+            <input type="text" id="first_name" placeholder="First name" />
+            <p>Last name</p>
+            <input type="text" id="last_name" placeholder="Last name" /> <br />
+            <div id="gender">
+                <input type="radio" name="gender" value="male">Male</input>
+                <input type="radio" name="gender" value="female">Female</input>
+            </div>
+            <p>Email</p>
+            <input type="text" id="new_email" placeholder="Email" /> <br />
+            <p>Password</p>
+            <input type="password" id="new_password" placeholder="Password" /> <br />
+            <p>Confirm password</p>
+            <input type="password" id="new_c_password" placeholder="Confirm password" /> <br />
+            <button id="signup_button">Sign Up</button>
+          </form>
+        </div>
+        <div class="signed">
+            <p id="login">You are signed up.</p>
+        </div>
+        <div class="loggedin">
+            <p id="login">You are logged in.</p>
+        </div>
+      </div>
+    </div>
+    <div class="alert" id="log_email">Your email address is invalid!</div>
+    <div class="alert" id="log_pass">Please enter your password!</div>
+    <div class="alert" id="sign_first">Please enter your first name!</div>
+    <div class="alert" id="sign_first1">First name cannot contain numbers!</div>
+    <div class="alert" id="sign_last">Please enter your last name!</div>
+    <div class="alert" id="sign_last1">Last name cannot contain numbers!</div>
+    <div class="alert" id="sign_gender">Please select your gender!</div>
+    <div class="alert" id="sign_email">Please enter your email!</div>
+    <div class="alert" id="sign_email1">Your email address is invalid!</div>
+    <div class="alert" id="sign_pass">Please enter your password!</div>
+    <div class="alert" id="sign_pass1">Requirement: at least 6 characters, one capital letter, one lowercase letter, al least one digit and one special character!</div>
+    <div class="alert" id="sign_c_pass">Please re-enter your password!</div>
+    <div class="alert" id="sign_c_pass1">Password does not match!</div>
+    <div class="check" id="check_1"><img src="icon.png"></div>
+    <div class="check" id="check_2"><img src="icon.png"></div>
+    <div class="check" id="check_3"><img src="icon.png"></div>
+    <div class="check" id="check_4"><img src="icon.png"></div>
+    <div class="check" id="check_5"><img src="icon.png"></div>
+    <div class="check" id="check_6"><img src="icon.png"></div>
+    <script src="index.js"></script>
+  </body>
+</html>

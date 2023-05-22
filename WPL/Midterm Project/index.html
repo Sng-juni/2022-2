@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SKKU ATM</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="check_account">         <!-- account check form -->
+        <h1>SKKU ATM</h1>
+        <p>Enter your 16 digit account number or insert your card below:</p>
+        <input
+          type="password"
+          id="account_num"
+          placeholder="Enter Account Number"
+        />
+        <br />
+        <br />
+        <div id="input_button">
+          <button value="1" onclick="input_num(this)">1</button>
+          <button value="2" onclick="input_num(this)">2</button>
+          <button value="3" onclick="input_num(this)">3</button>
+          <button value="4" onclick="input_num(this)">4</button>
+          <button value="5" onclick="input_num(this)">5</button>
+          <button value="6" onclick="input_num(this)">6</button>
+          <button value="7" onclick="input_num(this)">7</button>
+          <button value="8" onclick="input_num(this)">8</button>
+          <button value="9" onclick="input_num(this)">9</button>
+          <button type="submit" id="ent" onclick="check_account(this)">Enter</button>
+          <button value="0" onclick="input_num(this)">0</button>
+          <button value="del" id="del" onclick="input_num(this)">Del</button>
+        </div>
+      </div>
+
+      <div class="check_pin"> <!-- PIN check form -->
+        <p>Please enter your PIN:</p>
+        <input
+          type="password"
+          id="pin"
+          placeholder="Enter PIN"
+          maxlength="4"
+        />
+        <br />
+        <br />
+        <div id="input_button">
+          <button value="1" onclick="input_pin(this)">1</button>
+          <button value="2" onclick="input_pin(this)">2</button>
+          <button value="3" onclick="input_pin(this)">3</button>
+          <button value="4" onclick="input_pin(this)">4</button>
+          <button value="5" onclick="input_pin(this)">5</button>
+          <button value="6" onclick="input_pin(this)">6</button>
+          <button value="7" onclick="input_pin(this)">7</button>
+          <button value="8" onclick="input_pin(this)">8</button>
+          <button value="9" onclick="input_pin(this)">9</button>
+          <button type="submit" id="ent" onclick="check_pin(this)">Enter</button>
+          <button value="0" onclick="input_pin(this)">0</button>
+          <button value="del" id="del" onclick="input_pin(this)">Del</button>
+        </div>
+        <div id="return_button">
+          <button onclick="return_card()">Return Card</button>
+        </div>
+      </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

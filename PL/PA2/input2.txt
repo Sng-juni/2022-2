@@ -1,0 +1,118 @@
+package my.demo
+
+import kotlin.text.*
+
+val gtemp = 5.0
+
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun sum2(a: Int, b: Int) = a + b
+
+fun printSum(a: Int, b: Int): Unit {
+    println("sum of $a and $b is ${a + b}")
+}
+
+fun printSum2(a: Int, b: Int) {
+    println("sum of $a and $b is ${a + b}")
+}
+
+val PI = 3.14
+var x = 0
+open class Shape
+
+class Rectangle(var height: Double, var length: Double) : Shape() {
+    var perimeter = (height + length) * 2
+}
+
+fun maxOf(a: Int, b: Int): Int? {
+    if (a > b) {
+        return a
+    } else {
+        return b
+    }
+}
+
+fun maxOf2(a: Int, b: Int) = if (a > b) a else b
+
+fun getStringLength(obj: Any): Int? {
+    // `obj` is automatically cast to `String` on the right-hand side of `&&`
+    if (obj is String && obj.length > 0) {
+        return obj.length
+    }
+    return null
+}
+
+fun main(args: Array<String>){
+        println(args.contentToString())
+        print("Hello ")
+        print("world!")
+        println(42)
+        println(sum(3, 5))
+        println(sum2(3, 5))
+        printSum(-1, 8)
+        printSum2(-1, 8)
+
+	val a: Int = 1  // immediate assignment
+        val b = 2   // `Int` type is inferred
+        val c: Int  // Type required when no initializer is provided
+        c = 3       // deferred assignment
+        println("a = $a, b = $b, c = $c")
+
+        var x = 5 // `Int` type is inferred
+        x += 1
+        println("x = $x")	
+
+	 val rectangle = Rectangle(5.0, 2.0)
+        println("The perimeter is ${rectangle.perimeter}")
+
+        val s1 = "a is $a"
+        println("max of 0 and 42 is ${maxOf(0, 42)}")
+        val items = listOf("apple", "banana", "kiwifruit")
+        for (item in items) {
+                println(item)
+        }
+        for (index in items.indices) {
+                println("item at $index is ${items[index]}")
+        }
+         while (index < items.size) {
+                println("item at $index is ${items[index]}")
+                index++
+        }
+
+
+        if (x in 1..y+1) {
+                println("fits in range")
+        }
+
+        if (-1 !in 0..list.lastIndex) {
+                println("-1 is out of range")
+        }
+        if (list.size !in list.indices) {
+                println("list size is out of valid list indices range, too")
+        }
+
+        for (x in 1..5) {
+                print(x)
+        }
+
+        for (x in 1..10 step 2) {
+                print(x)
+        }
+        println()
+        for (x in 9 downTo 0 step 3) {
+                print(x)
+        }
+
+        for (item in items) {
+                println(item)
+        }
+        val items = setOf("apple", "banana", "kiwifruit")
+
+        if (obj is List<String> && obj.length > 0) {
+                // `obj` is automatically cast to `String` in this branch
+                return obj.length
+        }
+        if (obj !is Char) return null
+}

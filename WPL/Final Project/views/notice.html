@@ -1,0 +1,36 @@
+{% extends 'template.html' %} {% block content %} {% if user %}
+<div class="notice-wrap">
+  <div>
+    <h1>Notice</h1>
+  </div>
+  <div class="notice-table-wrap">
+    <div>
+      {% if user.group === 'admin' %}
+      <div class="write-notice">
+        <form action="/post/notice" method="post">
+          <label for="content">Write Notice : </label>
+          <input
+            type="textarea"
+            id="input-notice"
+            name="content"
+            placeholder="Please Enter the Notice..."
+          />
+          <button type="submit" id="notice-btn">Submit</button>
+        </form>
+      </div>
+      <br />
+      {% endif %} {% for list in lists %}
+      <div>
+        <div class="noticed">
+          <div class="noticed-author">{{list.User.nickname}}</div>
+          <div class="noticed-date">/ {{list.createdAt}}</div>
+          <div class="noticed-content">{{list.content}}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<script scr="/notice.js"></script>
+
+{% endif %} {% endblock %}

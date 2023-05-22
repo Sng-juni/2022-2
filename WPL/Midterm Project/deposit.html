@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SKKU ATM</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="input_deposit">
+        <!-- input the amount of deposit form -->
+        <p>Enter the amount to deposit</p>
+        <input type="text" id="deposit" placeholder="$0000.00" />
+        <br />
+        <div id="input_s_button">
+          <button value="1" onclick="input_dep(this)">1</button>
+          <button value="2" onclick="input_dep(this)">2</button>
+          <button value="3" onclick="input_dep(this)">3</button>
+          <button value="4" onclick="input_dep(this)">4</button>
+          <button value="5" onclick="input_dep(this)">5</button>
+          <button value="6" onclick="input_dep(this)">6</button>
+          <button value="7" onclick="input_dep(this)">7</button>
+          <button value="8" onclick="input_dep(this)">8</button>
+          <button value="9" onclick="input_dep(this)">9</button>
+          <button value="0" onclick="input_dep(this)">0</button>
+          <button value="." onclick="input_dep(this)">.</button>
+          <button value="del" id="del" onclick="input_dep(this)">Del</button>
+          <button type="submit" id="l_ent" onclick="check_dep(this)">
+            Enter
+          </button>
+        </div>
+        <a href="main.html"><button id="back_button">Back</button></a>
+      </div>
+
+      <div class="check_deposit">
+        <!-- check deposit form -->
+        <h1>Are you sure you want to deposit the amount specified?</h1>
+        <p id="dep_amount"></p>
+        <button id="yes_button" onclick="deposit_(event)">Yes</button>
+        <button id="no_button" onclick="back_deposit(event)">No</button>
+      </div>
+
+      <div class="ok_deposit">
+        <!-- re-check deposit form -->
+        <p>Enter the specified amount of money into the ATM.</p>
+        <button id="ok_button" onclick="dep_ok(event)">OK</button>
+      </div>
+
+      <div class="deposited">
+        <!-- deposited form -->
+        <p>Money has been deposited.</p>
+        <img id="check_img" src="img/checkmark.png" /><br />
+        <div class="buttons">
+          <a href="main.html"><button id="home">Home</button></a>
+          <a href="deposit.html"><button id="dep_a">Deposit again</button></a>
+          <a href="index.html"><button id="return_c">Return Card</button></a>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'template.html' %} {% block content %} {% if user %}
+<div class="profile-wrap">
+  <div>
+    <h1>My Profile</h1>
+  </div>
+  <div class="profile-table-wrap">
+    <div>
+      <div class="profile-info">
+        <p class="profile-title">Email</p>
+        <p class="profile-content">{{ user.email }}</p>
+      </div>
+      <div class="profile-info">
+        <p class="profile-title">Nickname</p>
+        <p class="profile-content">{{ user.nickname }}</p>
+      </div>
+      <div class="profile-info">
+        <p class="profile-title">Group</p>
+        <p class="profile-content">{{ user.group }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endif %} {% endblock %}

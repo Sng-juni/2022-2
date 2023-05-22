@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SKKU ATM</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="input_transfer">
+        <div class="from">
+          <h1>From</h1>
+          <select name="from" id="from" value="1234567890123456">
+            <option selected disabled hidden>Choose an Account</option>
+            <option>1234567890123456</option>
+          </select>
+        </div>
+        <div>
+          <input type="text" id="transfer" placeholder="$0000.00" />
+          <br />
+          <div id="input_s_button">
+            <button value="1" onclick="input_trans(this)">1</button>
+            <button value="2" onclick="input_trans(this)">2</button>
+            <button value="3" onclick="input_trans(this)">3</button>
+            <button value="4" onclick="input_trans(this)">4</button>
+            <button value="5" onclick="input_trans(this)">5</button>
+            <button value="6" onclick="input_trans(this)">6</button>
+            <button value="7" onclick="input_trans(this)">7</button>
+            <button value="8" onclick="input_trans(this)">8</button>
+            <button value="9" onclick="input_trans(this)">9</button>
+            <button value="0" onclick="input_trans(this)">0</button>
+            <button value="." onclick="input_trans(this)">.</button>
+            <button value="del" id="del" onclick="input_trans(this)">
+              Del
+            </button>
+            <button type="submit" id="l_ent" onclick="check_trans(this)">
+              Enter
+            </button>
+          </div>
+        </div>
+        <div class="to">
+          <h1>To</h1>
+          <select name="to" id="to" value="1234567887654321">
+            <option selected disabled hidden>Choose an Account</option>
+            <option>1234567887654321</option>
+          </select>
+          <a href="main.html"><button id="back_button">Back</button></a>
+        </div>
+      </div>
+
+      <div class="check_transfer">
+        <h1>Transfer?</h1>
+        <p id="trans_amount"></p>
+        <p id="trans_from"></p>
+        <p id="trans_to"></p>
+        <button id="yes_button" onclick="transfer_(event)">Yes</button>
+        <button id="no_button" onclick="back_transfer(event)">No</button>
+      </div>
+
+      <div class="transferred">
+        <p>Money has been transferred.</p>
+        <img src="img/checkmark.png" id="check_img" />
+        <div>
+          <a href="main.html"><button id="home">Home</button></a>
+          <a href="transfer.html"
+            ><button id="with_a">Perform Anothe Transaction</button></a
+          >
+          <a href="index.html"><button id="return_c">Return Card</button></a>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

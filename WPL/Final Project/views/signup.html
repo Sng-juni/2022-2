@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/signup.css" />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <div class="container">
+        <form id="signup-form" action="/auth/signup" method="post">
+          <div id="greeting">
+            <h1>SignUp to IronFoot!</h1>
+          </div>
+          <div class="signup-wrap">
+            <div class="logo-wrap"><img src="/img/logo.png" /></div>
+            <div class="input-wrap">
+              <div class="input-content">
+                <label for="sign-email">Email</label>
+                <input type="email" id="sign-email" name="email" />
+              </div>
+              <div class="input-content">
+                <label for="sign-nickname">Nickname</label>
+                <input type="text" id="sign-nickname" name="nickname" />
+              </div>
+              <div class="input-content">
+                <label for="sign-password">Password</label>
+                <input type="password" id="sign-password" name="password" />
+              </div>
+              <div class="input-content">
+                <label for="sign-cpassword">Confirm Password</label>
+                <input type="password" id="sign-cpassword" name="cpassword" />
+              </div>
+              <div class="input-content" id="group">
+                  <input type="radio" name="group" value="0" style="display: none;" checked></input>
+                  <input type="radio" name="group" value="YB">YB</input>
+                  <input type="radio" name="group" value="OB">OB</input>
+                  <input type="radio" name="group" value="admin">Admin</input>
+              </div>
+              <button type="submit" class="btn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>      
+      <footer>
+        <div>Copyright © SeungJun Hwang All Rights Reserved.</div>
+      </footer>
+    <script>
+      window.onload = () => {
+        if (new URL(location.href).searchParams.get("error")) {
+          alert("This email already exist.");
+        }
+      };
+    </script>
+  </body>
+</html>
+

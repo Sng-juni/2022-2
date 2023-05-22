@@ -1,0 +1,243 @@
+body {
+    background-color: #e5ffff;
+}
+
+.main {
+    background-image: url("img/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h1 {
+    color: #009688;
+}
+#start {
+    background-color: white;
+    color: #009688;
+    width: 120px;
+    height: 30px;
+    font-size: 12px;
+    border-color: #009688;
+    border-width: 1px;
+    border-radius: 15px;
+
+}
+#start:hover {
+    box-shadow: 1px 1px 5px #009688;
+}
+
+.q1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: normal;
+}
+.q1_wrap {
+    display: grid;
+    grid-template-rows: 100px 100px 200px;
+    align-items: center;
+}
+.q_info {
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+#question_1 {
+    width: 500px;
+    word-break: normal;
+}
+#question_2 {
+    width: 500px;
+    word-break: normal;
+}
+#question_3 {
+    width: 500px;
+    word-break: normal;
+}
+#question_4 {
+    width: 500px;
+    word-break: normal;
+}
+#q_100 {
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid #009688;
+}
+#q_25 {
+    width: 50px;
+    height: 30px;
+    background-color: #009688;
+    border-radius: 15px;
+}
+#q_50 {
+    width: 100px;
+    height: 30px;
+    background-color: #009688;
+    border-radius: 15px;
+}
+#q_75 {
+    width: 150px;
+    height: 30px;
+    background-color: #009688;
+    border-radius: 15px;
+}
+#q_100_100 {
+    width: 200px;
+    height: 30px;
+    background-color: #009688;
+    border-radius: 15px;
+}
+#score_1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #009688;
+}
+.question {
+    color:#009688;
+    font-size: 25px;
+    font-weight: bold;
+    grid-row: 2 / 3;
+}
+#question_1 {
+    white-space: normal;
+}
+.answers {
+    grid-row: 3 / 5;
+    display: grid;
+    grid-gap: 5px;
+}
+.answers > div {
+    text-align: left;
+    background-color: white;
+    border-width: 0px;
+    border-radius: 15px;
+    width: 500px;
+    height: 35px;
+}
+#a1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#a2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#a3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#a4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#tag {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #009688;
+    border-radius: 15px;
+    width: 45px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+#a1:hover {
+    box-shadow: 1px 1px 5px #009688;
+}
+#a2:hover {
+    box-shadow: 1px 1px 5px #009688;
+}
+#a3:hover {
+    box-shadow: 1px 1px 5px #009688;
+}
+#a4:hover {
+    box-shadow: 1px 1px 5px #009688;
+}
+
+
+.q2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.q2_wrap {
+    display: grid;
+    grid-template-rows: 100px 100px 200px;
+    align-items: center;
+}
+.question > p {
+    margin: 0px;
+}
+#score_2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #009688;
+}
+
+
+.q3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.q3_wrap {
+    display: grid;
+    grid-template-rows: 100px 100px 200px;
+    align-items: center;
+}
+#score_3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #009688;
+}
+
+.q4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.q4_wrap {
+    display: grid;
+    grid-template-rows: 100px 100px 200px;
+    align-items: center;
+}
+#score_4 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #009688;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 450px;
+}
+#again {
+    background-color: white;
+    color: #009688;
+    width: 120px;
+    height: 30px;
+    font-size: 12px;
+    border-color: #009688;
+    border-width: 1px;
+    border-radius: 15px;
+
+}
+#again:hover {
+    box-shadow: 1px 1px 5px #009688;
+}
